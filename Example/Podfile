@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'TheValidator_Example' do
+  pod 'TheValidator', :path => '../'
+
+  target 'TheValidator_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
