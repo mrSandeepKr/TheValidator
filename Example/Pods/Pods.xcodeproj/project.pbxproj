@@ -11,6 +11,7 @@
 		129D5B7FF52A00E3F84088DD854474DC /* TheValidator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D92745C85F316EFBF77AD77B6C43EB97 /* TheValidator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34FE14E8C88307C9975566056D3D044A /* Pods-TheValidator_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E20C89833E48A775116F4D9A2A420EF /* Pods-TheValidator_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		454C2F59F28632B26D03C94E55384812 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		6D6A0770284CF4E700DAD08B /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6A076F284CF4E700DAD08B /* Validator.swift */; };
 		96ECFA79F38CE06050E5E72362AB44CE /* Pods-TheValidator_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45243862DF61EBE590CBF6A9DCDBD08A /* Pods-TheValidator_Example-dummy.m */; };
 		BDF3A773FDAE9C63B8E67514DFB25E6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		CF92E7342A27CA424E7FC54C27DD7274 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -52,9 +53,10 @@
 		56272ABD3E161252DE5AFC652F6FD437 /* Pods-TheValidator_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TheValidator_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5A9D0764909027678B631397A29CD85A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5AE3AD07BE05898793CA86E837E324A8 /* TheValidator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TheValidator.release.xcconfig; sourceTree = "<group>"; };
-		5F0C157DD29C4AC93A84375E1D18C097 /* Pods-TheValidator_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TheValidator_Example"; path = Pods_TheValidator_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F0C157DD29C4AC93A84375E1D18C097 /* Pods_TheValidator_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheValidator_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61D1927C41043F85988596E14BF31217 /* TheValidator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TheValidator.debug.xcconfig; sourceTree = "<group>"; };
-		6BF127F168A9F02B2FF26A0421BB904E /* TheValidator */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TheValidator; path = TheValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BF127F168A9F02B2FF26A0421BB904E /* TheValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TheValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D6A076F284CF4E700DAD08B /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		6E6DD96EC5FD4EF0F73B00BCE8DEFA4D /* TheValidator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TheValidator-dummy.m"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		74406C3D7084CF8DE6DA369196D10199 /* TheValidator-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TheValidator-Info.plist"; sourceTree = "<group>"; };
@@ -110,9 +112,9 @@
 		3EE093B3B2023363995EF3C8D879F330 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5F0C157DD29C4AC93A84375E1D18C097 /* Pods-TheValidator_Example */,
+				5F0C157DD29C4AC93A84375E1D18C097 /* Pods_TheValidator_Example.framework */,
 				B3949A2D9FB85EF6003465D878BE5CB6 /* Pods-TheValidator_Tests */,
-				6BF127F168A9F02B2FF26A0421BB904E /* TheValidator */,
+				6BF127F168A9F02B2FF26A0421BB904E /* TheValidator.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,9 +170,18 @@
 			path = "Target Support Files/Pods-TheValidator_Example";
 			sourceTree = "<group>";
 		};
+		6D6A076C284CE4AC00DAD08B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6D6A076F284CF4E700DAD08B /* Validator.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		A4AC441FA30E4187DE0FDF4263A08B2B /* TheValidator */ = {
 			isa = PBXGroup;
 			children = (
+				6D6A076C284CE4AC00DAD08B /* Source */,
 				52B9B80427AA3DE0DF43AF9DD081E5E0 /* Pod */,
 				E1C7B0CBA2F0AD7EE0D370FF9D599916 /* Support Files */,
 			);
@@ -265,7 +276,7 @@
 			);
 			name = TheValidator;
 			productName = TheValidator;
-			productReference = 6BF127F168A9F02B2FF26A0421BB904E /* TheValidator */;
+			productReference = 6BF127F168A9F02B2FF26A0421BB904E /* TheValidator.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		83250C3C1AE8D3A08A2DDFADF7942690 /* Pods-TheValidator_Example */ = {
@@ -284,7 +295,7 @@
 			);
 			name = "Pods-TheValidator_Example";
 			productName = Pods_TheValidator_Example;
-			productReference = 5F0C157DD29C4AC93A84375E1D18C097 /* Pods-TheValidator_Example */;
+			productReference = 5F0C157DD29C4AC93A84375E1D18C097 /* Pods_TheValidator_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8FB0C00AD4C5F02406A8F3840EF0FCBC /* Pods-TheValidator_Tests */ = {
@@ -314,6 +325,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					01BD05E58F927B4F56BA7F9C50A97372 = {
+						LastSwiftMigration = 1340;
+					};
+					83250C3C1AE8D3A08A2DDFADF7942690 = {
+						LastSwiftMigration = 1340;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -380,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D6A0770284CF4E700DAD08B /* Validator.swift in Sources */,
 				109E173983F9B753829C284F57DE32A9 /* TheValidator-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +426,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AE3AD07BE05898793CA86E837E324A8 /* TheValidator.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -504,6 +525,7 @@
 			baseConfigurationReference = 0E050B3EFE1932AF14D7A8A7086539A2 /* Pods-TheValidator_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -525,6 +547,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -537,6 +560,7 @@
 			baseConfigurationReference = 19F894B03DC23FE1C954716612921160 /* Pods-TheValidator_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -558,6 +582,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -568,6 +594,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 61D1927C41043F85988596E14BF31217 /* TheValidator.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -587,6 +614,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
