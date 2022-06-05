@@ -1,0 +1,16 @@
+PODS:
+  - TheValidator (0.1.0)
+
+DEPENDENCIES:
+  - TheValidator (from `../`)
+
+EXTERNAL SOURCES:
+  TheValidator:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TheValidator: e5dee149a4e0f8756c175485a4456eecba6ddb2b
+
+PODFILE CHECKSUM: 7d34b19f0d2e284e56c3a4360529c85609201d2c
+
+COCOAPODS: 1.11.3

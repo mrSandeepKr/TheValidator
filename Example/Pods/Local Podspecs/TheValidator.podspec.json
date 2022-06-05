@@ -1,0 +1,22 @@
+{
+  "name": "TheValidator",
+  "version": "0.1.0",
+  "summary": "A short description of TheValidator.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/mrSandeepKr/TheValidator",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "mrSandeepKr": "sandeep.kumar.ece16@itbhu.ac.in"
+  },
+  "source": {
+    "git": "https://github.com/mrSandeepKr/TheValidator.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "TheValidator/Classes/**/*"
+}
